@@ -1,3 +1,9 @@
-const fs = require('fs');
+const https = require("http");
 
-console.log(fs)
+const server = https.createServer((req, res) => {
+    res.end("Hello");
+});
+
+server.listen(3000, () => {
+    console.log("Server running...")
+});
